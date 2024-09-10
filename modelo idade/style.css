@@ -41,3 +41,6 @@ div#pgt{
 div#res p{
     margin-left: 10px;
 }
+img{
+    max-width: 330px;
+}

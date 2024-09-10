@@ -44,7 +44,7 @@ function verificar(){
             }   
         }
             res.style.textAlign='center'
-            res.innerHTML= `Detectamos ${gênero} com idade de ${idade} anos.`
+            res.innerHTML= `Detectamos um(a) ${gênero} com idade de ${idade} anos.`
             res.appendChild(img)
     }
 
