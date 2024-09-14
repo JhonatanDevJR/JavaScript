@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('fit.jpg');
+        }
+        section{
+          background-color: rgb(192, 191, 191);
+          max-width: 500px;
+          height: 500px;
+          box-shadow: 3px 3px 3px black;
+          text-align: justify;
+          display: block;
+          margin: auto;
+          border-radius: 5px;
+          padding: 5px;
+        }
+        h1{
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <h1><u>Calculadora humana + - %</u></h1>
+    <div id="cal">resultado</div>
+    <script>
+        //var nome= prompt('Digite o seu nome:')
+        //var peso= parseInt (prompt('Digite o seu peso:'))
+        //var altura=parseFloat (prompt('Digite a sua altura: (UTILIZE . )'))
+        var cal= document.getElementById('cal')
+        var IMC= peso/altura**2
+        var agua= (peso*35)
+        window.document.write(`Você se chama: ${nome.toLocaleUpperCase()}, tem: ${peso}Kg, e ${altura}cm de altura.`)
+        window.document.write(`<p>Seu IMC é de: <strong>${IMC}</strong></p>`)
+        window.document.write(`Você precisa ingerir diariamente: <strong>${agua}</strong>ml de água 💧.`)
+        
+        if (IMC<18.5){
+            cal.innerHTML=(`<p>Você está á <strong>BAIXO</strong> do peso</p>`)
+            cal.style.background='yellow'
+        } if (IMC>= 18.5 && IMC<=24.9){
+            cal.innerHTML=(`<p>Você está no peso <strong>IDEAL</strong>.</p>`)
+            cal.style.background='rgb(50, 155, 50)'
+        } if (IMC>= 25 && IMC<=29.9){
+            cal.innerHTML=(`<p>Você está em <strong>SOBREPESO</strong>!</p>`)
+            cal.style.background='yellow'
+        } if(IMC>30 && IMC<34.9){
+            cal.innerHTML=`<p>Você está com <strong>OBESIDADE GRAU 1</strong>!</p>`
+            cal.style.background='red'
+        }
+
+    </script>
+    </section>
+    
+</body>
+</html>

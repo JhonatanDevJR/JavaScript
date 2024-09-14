@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculando</title>
+    <style>
+        button{
+            padding: 30px;
+            font-size: 20px
+        }
+        button:hover{
+            background-color: blue;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando valores</h1>
+    <button onclick="Somar()">Clique para calcular</button>
+    <hr>
+    <div id="resultado">O resultado vai aparecer aqui:</div>
+    
+    <script>
+        function Somar(){
+            let num= Number(window.prompt('Digite um número:'))
+            var s= num+num
+            var m= s/2
+            resultado.innerHTML=`O número a ser analisado aqui será o <strong>${num}</strong>.<hr>`
+            resultado.innerHTML+=`<p>A soma entre ${num} + ${num} é de: ${s}</p>`
+            resultado.innerHTML+=`<p>O valor de ${num}² é de: ${Math.pow(num,2)}</p>`
+            resultado.innerHTML+=`O valor de ${num}³ é de: ${Math.pow(num,3)}`
+            resultado.innerHTML+=`<p>A raíz quadrada de ${num} é: ${Math.sqrt(num)}</p>`
+            resultado.innerHTML+=`A média desse valor x2 /2 é de: ${m}`
+            
+
+        }
+    </script>
+</body>
+</html>

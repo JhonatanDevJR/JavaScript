@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando média</title>
+</head>
+<body>
+    <h1>Média do aluno</h1>
+    
+     <button onclick="Somar()" value="Calcular média">Calcular a média</button>
+    <div id="pimba"></div>
+
+    <script>
+        function Somar(){
+            let nome=(window.prompt('Qual é o nome do aluno?'))
+            let num1=Number(window.prompt(`Digite a 1º nota de ${nome}:`))
+            let num2=Number(window.prompt(`Digite a 2º nota de ${nome}:`))
+            let res= window.document.getElementById('pimba')
+            var med= num1+num2
+            var r= med/2
+            res.innerHTML+=`Aqui vai aparecer as notas de: ${nome}.`
+            res.innerHTML+=`<p>As notas obtidas de ${nome} foram: ${num1} e ${num2}.</p>`
+            res.innerHTML+=`<p> A média final de ${nome} foi de ${r}.</p>`
+            
+            
+        }
+        
+    </script>
+</body>
+</html>

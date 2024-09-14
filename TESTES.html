@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENTRAL DE TESTES 🤓</title>
+    <style>
+        button{
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>CENTRAL DE TESTES 🤓</h1>
+<p>Aqui vai o resultado</p>
+<p>Aprendendo a usar <strong>Dom</strong> em JavaScript </p>
+<div id="msg">Clique em mim</div>
+<p><button onclick="clicar()" id="but" onmouseenter="entrou()" onmouseout="saiu()">botão clicável</button></p><!-- BOTÃO CLICÁVEL-->
+<script>
+    var but= document.getElementById('but')
+    function clicar(){
+        //addEventListener('clicar')
+        but.innerText='clicou!'
+        but.style.background='red'
+    }
+    function entrou(){
+        //addEventListener('entrou')
+        but.innerText='Entrou'
+        
+    }
+    function saiu(){
+        //addEventListener('saiu')
+        but.innerText='Saiu!'
+        but.style.background='yellowgreen'
+    }
+    var nome= window.prompt('Escreva seu nome:')//VAI APARECER UMA CAIXA DE TEXTO
+    window.document.write(`<p>seu nome em letras maiúsculas é: ${nome.toUpperCase()}</p>`)//VAI ESCREVER O NOME QUE FOI DIGITADO NA VAR "NOME" EM LETRAS MAIÚSCULAS
+    window.document.write(`<p>seu nome em letras minúsculas é: ${nome.toLowerCase()}</p>`)
+    window.document.write (`Seu nome tem ${nome.length} letras.`)//QUANTAS LETRAS TEM O NOME
+    corpo.style.background='WHITE'//AQUI EU POSSO MUDAR A COR DO BODY
+    var corpo= document.body
+    var p1= window.document.getElementsByTagName('p')[1]//VAI LER A TAG QUE EU COLOCAR DENTRO ()
+    window.document.write(`Vai aparecer assim: ${p1.innerHTML}`)//VAI ESCREVER A TAG SELECIONADA ACIMA
+    
+    
+</script>
+</body>
+</html>
