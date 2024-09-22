@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Interaja com o botão</h1>
+    <button type="button" onclick="horas()">Clique aqui!</button>
+    <div id="soma"></div>
+    <script>
+        function horas(){
+            var data= new Date()
+            var h= data.getHours()
+            var m= data.getMinutes()
+            var s= data.getSeconds()
+            var d= data.getUTCDate()
+            var mês= data.getUTCMonth()
+            var ano= data.getFullYear()
+
+            var res= window.document.getElementById('soma')
+            res.innerHTML=`<h3>Agora são: <mark>${h}:${m}:${s}</mark> e hoje é dia: <mark>${d}/${mês}/${ano}</mark></h3>`
+            res.innerHTML+=`<p>teste:${data}</p>`
+
+        }
+    </script>
+    
+</body>
+</html>

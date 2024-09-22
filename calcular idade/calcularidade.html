@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular idade</title>
+    <style>
+        h1{
+            font-family: fantasy;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular idade</h1>
+    <button type="button" onclick="calcular()">Calcular sua idade</button>
+    <div id="calculo">Aqui vai aparecer o resultado</div>
+    <script>
+        function calcular(){
+            var idade=Number(window.prompt('Em que ano você nasceu?'))
+            var cal= document.getElementById('calculo')
+            var data= new Date()
+            var ano= data.getFullYear()
+            var som= ano- idade
+            cal.innerHTML=`De acordo com o ano que você nasceu, em ${ano} você terá <b>${som} anos</b>.`
+            
+        }
+    </script>
+</body>
+</html>

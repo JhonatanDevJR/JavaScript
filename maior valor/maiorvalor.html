@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior valor</title>
+    <style>
+        h1{
+            font-family: cursive;
+        }
+        button{
+            width: 200px;
+            height: 70px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maior valor</h1>
+    <button type="button" onclick="calcular()">Clique para começar</button>
+    <div id="resultado"><b>O resultado vai aparecer aqui.</b></div>
+
+<script>
+    function calcular(){
+        let num= Number(window.prompt('Digite um número:'))
+        let num2= Number(window.prompt('Digite outro número:'))
+        var res= document.getElementById('resultado')
+        dat
+        if( num > num2){
+            res.innerHTML=`Os valores digitados foram: ${num} e ${num2}. E o maior valor é: ${num}`
+        }else if (num < num2){
+            res.innerHTML=`Os valores digitados foram: ${num} e ${num2}. E o maior valor é: ${num2}`
+        }if (num== num2){
+            res.innerHTML=`Os valores digitados foram: ${num} e ${num2}. E eles são <strong>iguais</strong>.`
+        }
+    }
+
+</script>
+</body>
+</html>
