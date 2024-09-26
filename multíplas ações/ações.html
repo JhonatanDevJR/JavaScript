@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multíplas ações</title>
+</head>
+<body>
+    <h1>Multíplas ações</h1>
+    <button type="button" onclick="ação()">Clique para iniciar</button>
+    <div id="res">Clique no botão para começar</div>
+    <script>
+        function ação(){
+            var num= Number(prompt('Digite um número:'))
+            var num2= Number(prompt('Digite outro número:'))
+            var act= prompt(`Os números que você digitou foram: ${num} e ${num2}\n Escolha uma das opções;\n[1]SOMAR \n[2]SUBTRAIR \n[3]MULTIPLICAR \n[4]DIVIDIR \n[5]EXPONENCIAÇÃO`)
+            var soma=Number(num+num2)
+            var sub=Number(num-num2)
+            var mult= num*num2
+            var div= num/num2
+            var exp= num**num2
+            var res= document.getElementById('res')
+            
+
+            if(act==1){
+                res.innerHTML=`A soma entre ${num} e ${num2} é de: ${soma}`
+            } if (act==2){
+                res.innerHTML=`<p>A subtração de ${num} - ${num2} é de: ${sub}</p>`
+            } if(act==3){
+                res.innerHTML=`<p>A multiplicação de ${num} e ${num2} é de: ${mult}</p>`
+            } if (act==4){
+                res.innerHTML=`<p>A divisão de ${num} e ${num2} é de: ${div}</p>`
+            } if (act==5){
+                res.innerHTML=`O número ${num} elevado ao número ${num2} é de: ${exp}`
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estações do ano</title>
+</head>
+<body>
+    <h1>Descubra a estação do ano</h1>
+    <button type="button" onclick="clicou()">Informe o mês</button>
+    <div id="res">Clique no botão acima para informar o mês.</div>
+    <script>
+        function clicou(){
+            var mes= prompt('Escreva o nome do mês por extenso para descobrir sua estação;')
+            var div= document.getElementById('res')
+            var jan=1
+            var fev=2
+            var mar=3
+            var abr=4
+            var mai=5
+            var jun=6
+            var jul=7
+            var ago=8
+            var set=9
+            var out=10
+            var nov=11
+            var dez=12
+            
+            if(mes==1 || mes==2 || mes==3){//verão
+                res.innerHTML=`<p>Você escreveu o mês ${mes}, e a estação é: <strong>VERÃO!</strong></p>`
+            }else if(mes== 4 ||mes== 5 || mes== 6){//outono
+                res.innerHTML=`<p>Você escreveu o mês ${mes}, e a estação é: <strong>OUTONO!</strong></p>`
+            } else if(mes== 7||mes== 8 ||mes==9){//inverno
+                res.innerHTML=`<p>Você escreveu o mês ${mes}, e a estação é: <strong>INVERNO!</strong></p>`
+            } else if(mes==10 ||mes==11 ||mes==12){
+                res.innerHTML=`<p>Você escreveu o mês ${mes}, e a estação é: <strong>PRIMAVERA!</strong></p>`
+            }
+            
+        }
+    </script>
+</body>
+</html>

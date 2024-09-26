@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hummmmmm boiola</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: sans-serif;
+        }
+        button#um{
+            margin-right: 10px;
+            font-size: 25px;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(80, 194, 80);
+        }
+        button#dois{
+            font-size: 25px;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(221, 70, 44);
+        }
+        button#dois:hover{
+            background-color: rgb(80, 194, 80);
+        }
+        img{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>VOCÊ É GAY? 🤨🤨🤨</h1>
+    <button type="button" onclick="ação()" id="um">SIM</button>
+    <button type="button" onmouseenter="entrou()" onmouseout="saiu()" onclick="ação2()" id="dois">NÃO</button>
+    <div id="res"></div>
+    <script>
+        var dois= document.getElementById('dois')
+        var img= document.createElement('img')
+        img.setAttribute('id','foto')
+        function ação(){
+            let res= document.getElementById('res')
+            res.innerHTML=`<p>UUUMMMMM BOIOLÃO!!!!</p>`
+            img.setAttribute('src','gay.jpg')
+            res.appendChild(img)
+
+        }
+        function ação2(){
+            let res= document.getElementById('res')
+            res.innerHTML=`<p>UUUMMMMM BOIOLÃO!!!!</p>`
+            img.setAttribute('src','ele.jpg')
+            res.appendChild(img)
+        }
+        function entrou(){
+            dois.innerHTML=`SIM` 
+        }
+        function saiu(){
+            dois.innerHTML=`NÃO`
+            res.innerHTML=''
+        }
+    </script>
+</body>
+</html>

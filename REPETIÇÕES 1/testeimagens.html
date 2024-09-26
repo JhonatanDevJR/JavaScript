@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JONTA</title>
+</head>
+<body id="bobo">
+    <h1>jonta jonta</h1>
+    <div id="res">sei lá o que</div>
+    <button type="button" onclick="teste()">cu</button>
+    
+    <script>
+        function teste(){
+        var hour= prompt('Digite um horário:(somente números)')
+        var res= document.getElementById('res')
+        var bo= document.getElementById('bobo')
+        var img= document.createElement('img')
+        img.setAttribute('id','foto')
+        
+        
+        if(hour>=6 && hour<12){
+            //bo.style.background='brown'
+            window.alert(`Detectamos o horário: ${hour}. BOM DIA!`)
+            bo.style.background='brown'
+            img.setAttribute('src','jhin2.jpg')
+            
+        } else if(hour>=12 && hour<18){
+            window.alert(`Detectamos o horário: ${hour}. BOA TARDE!`)
+            bo.style.background='yellow'
+            img.setAttribute('src','jhin2.jpg')
+        } else if (hour>=18){
+            window.alert(`Detectamos o horário: ${hour}. BOA NOITE!`)
+            bo.style.background='purple'
+            img.setAttribute('src','jhin2.jpg')
+        
+        }
+        res.appendChild(img)
+    }
+    
+    
+    </script>
+</body>
+</html>
